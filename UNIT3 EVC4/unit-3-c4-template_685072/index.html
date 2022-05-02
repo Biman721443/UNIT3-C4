@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News App</title>
+ 
+</head>
+<style>
+   #navbar{
+    height: 70px;
+    width: 80%;
+    border: 1px solid;
+    margin-left:250px ;
+    justify-content: center;
+    text-align: center;
+    background-color: teal;
+}
+#search_input{
+  height: 50%;
+  width: 70%;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+#sidebar{
+  height: 280px;
+  width: 230px;
+  border: 1px solid;
+  background-color: teal;
+}
+#sidebar>div{
+  font-size: 30px;
+ margin-top: 7%;
+}
+#sidebar>div>a{
+  text-decoration: none;
+  color: rgb(7, 52, 69);
+  background-color: rgb(243, 239, 239);
+}
+h3{
+  background-color: azure;
+  text-decoration: none;
+}
+</style>
+<body>
+  <!-- Give Navbar with id "navbar"  -->
+  <!-- Navbar will have input with id search_input and a link to home page i.e. index.html -->
+  <!-- Sidebar will have id "sidebar"  -->
+  <!-- Give link to top headlines of countries in sidebar with id as their country codes 
+    india :- in
+    china :- ch
+    usa :- us
+    uk : uk
+    Newzeland :- nz -->
+
+  <!-- Append results inside div with id "results"  -->
+  <!-- News divs will have class "news"  -->
+
+  <div id="navbar">
+         <input id="search_input">
+  </div>
+
+  <div id="sidebar">
+    <h2>Countries</h2>
+    <h3 id="in" onclick="cSearch(this.id)"><a href="">India</a> </h3>
+    <h3 id="ch" onclick="cSearch(this.id)"><a href="">China</a></h3>
+    <h3 id="us" onclick="cSearch(this.id)"><a href="">Usa</a></h3>
+    <h3 id="uk" onclick="cSearch(this.id)"><a href="">United Kingdom</a></h3>
+    <h3 id="nz" onclick="cSearch(this.id)"><a href="">New Zealand</a></h3>
+  </div>
+
+  <div id="results"></div>
+</body>
+
+</html>
+
+<script type="module" src="/scripts/index.js"></script>
